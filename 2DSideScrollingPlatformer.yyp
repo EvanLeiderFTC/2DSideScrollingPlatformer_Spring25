@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.4.1.152",
   },
   "name":"2DSideScrollingPlatformer",
   "resources":[
@@ -39,6 +39,7 @@
     {"id":{"name":"obj_btn_play","path":"objects/obj_btn_play/obj_btn_play.yy",},},
     {"id":{"name":"obj_btn_story","path":"objects/obj_btn_story/obj_btn_story.yy",},},
     {"id":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},},
+    {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_floor","path":"objects/obj_floor/obj_floor.yy",},},
     {"id":{"name":"obj_hud_coins","path":"objects/obj_hud_coins/obj_hud_coins.yy",},},
     {"id":{"name":"obj_label_parent","path":"objects/obj_label_parent/obj_label_parent.yy",},},
@@ -51,6 +52,9 @@
     {"id":{"name":"spr_btn","path":"sprites/spr_btn/spr_btn.yy",},},
     {"id":{"name":"spr_coin_hud","path":"sprites/spr_coin_hud/spr_coin_hud.yy",},},
     {"id":{"name":"spr_coin","path":"sprites/spr_coin/spr_coin.yy",},},
+    {"id":{"name":"spr_enemy1_idle","path":"sprites/spr_enemy1_idle/spr_enemy1_idle.yy",},},
+    {"id":{"name":"spr_enemy1_jump","path":"sprites/spr_enemy1_jump/spr_enemy1_jump.yy",},},
+    {"id":{"name":"spr_enemy1_walk","path":"sprites/spr_enemy1_walk/spr_enemy1_walk.yy",},},
     {"id":{"name":"spr_floor","path":"sprites/spr_floor/spr_floor.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
     {"id":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},},

@@ -9,9 +9,10 @@ collision_tilemap = layer_tilemap_get_id("Tiles");
 /// @DnDVersion : 1
 /// @DnDHash : 16B43CB6
 /// @DnDComment : 1 would be pressing right$(13_10)-1 would be pressing left$(13_10)0 would be no input
+/// @DnDDisabled : 1
 /// @DnDArgument : "expr" "keyboard_check(vk_right) - keyboard_check(vk_left)"
 /// @DnDArgument : "var" "move_x"
-move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
+
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -30,6 +31,7 @@ move_x = move_x * walk_speed;
 /// @DnDAction : YoYo Games.Collisions.If_Object_At
 /// @DnDVersion : 1.1
 /// @DnDHash : 0879589D
+/// @DnDComment : if on ground
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "2"
 /// @DnDArgument : "y_relative" "1"
@@ -52,30 +54,53 @@ if ((l0879589D_0 > 0))
 	/// @DnDArgument : "msg" "collision_tilemap"
 	show_debug_message(string(collision_tilemap));
 
-	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
-	/// @DnDVersion : 1
-	/// @DnDHash : 0B91C2C7
+	/// @DnDAction : YoYo Games.Collisions.If_Object_At
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 0A867C43
+	/// @DnDComment : is there a wall?
 	/// @DnDParent : 0879589D
-	var l0B91C2C7_0;
-	l0B91C2C7_0 = keyboard_check_pressed(vk_space);
-	if (l0B91C2C7_0)
+	/// @DnDArgument : "x" "x + (25 * sign(move_x))"
+	/// @DnDArgument : "y_relative" "1"
+	/// @DnDArgument : "object" "collision_tilemap"
+	var l0A867C43_0 = instance_place(x + (25 * sign(move_x)), y + 0, [collision_tilemap]);
+	if ((l0A867C43_0 > 0))
 	{
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 7374C4F8
 		/// @DnDComment : jump
-		/// @DnDParent : 0B91C2C7
+		/// @DnDParent : 0A867C43
 		/// @DnDArgument : "expr" "-jump_speed"
 		/// @DnDArgument : "var" "move_y"
 		move_y = -jump_speed;
-	
-		/// @DnDAction : YoYo Games.Audio.Play_Audio
-		/// @DnDVersion : 1.1
-		/// @DnDHash : 758C8F6E
-		/// @DnDParent : 0B91C2C7
-		/// @DnDArgument : "soundid" ""
-		audio_play_sound(, 0, 0, 1.0, undefined, 1.0);
 	}
+
+	/// @DnDAction : YoYo Games.Collisions.If_Object_At
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 37CD8CF2
+	/// @DnDComment : is there a gap in the floor?
+	/// @DnDParent : 0879589D
+	/// @DnDArgument : "x" "x + (30 * sign(move_x))"
+	/// @DnDArgument : "y" "y + 50"
+	/// @DnDArgument : "object" "collision_tilemap"
+	var l37CD8CF2_0 = instance_place(x + (30 * sign(move_x)), y + 50, [collision_tilemap]);
+	if ((l37CD8CF2_0 > 0))
+	{
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 141C4609
+		/// @DnDComment : jump
+		/// @DnDParent : 37CD8CF2
+		/// @DnDArgument : "expr" "-jump_speed"
+		/// @DnDArgument : "var" "move_y"
+		move_y = -jump_speed;
+	}
+
+	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+	/// @DnDVersion : 1
+	/// @DnDHash : 0B91C2C7
+	/// @DnDDisabled : 1
+	/// @DnDParent : 0879589D
 }
 
 /// @DnDAction : YoYo Games.Common.Else
