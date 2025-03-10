@@ -83,8 +83,9 @@ if ((l0879589D_0 > 0))
 	/// @DnDArgument : "x" "x + (30 * sign(move_x))"
 	/// @DnDArgument : "y" "y + 50"
 	/// @DnDArgument : "object" "collision_tilemap"
+	/// @DnDArgument : "not" "1"
 	var l37CD8CF2_0 = instance_place(x + (30 * sign(move_x)), y + 50, [collision_tilemap]);
-	if ((l37CD8CF2_0 > 0))
+	if (!(l37CD8CF2_0 > 0))
 	{
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
