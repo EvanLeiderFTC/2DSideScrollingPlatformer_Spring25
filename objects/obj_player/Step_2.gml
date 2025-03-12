@@ -58,7 +58,7 @@ var l2CE1D476_0 = instance_place(x + 0, y + 2, [collision_tilemap]);if ((l2CE1D
 	
 		/// @DnDAction : YoYo Games.Instances.Sprite_Scale
 		/// @DnDVersion : 1
-		/// @DnDHash : 02D86DD4
+		/// @DnDHash : 38FC0D1C
 		/// @DnDParent : 7579F685
 		/// @DnDArgument : "xscale" "-1 * abs(image_xscale)"
 		/// @DnDArgument : "yscale" "image_yscale"
@@ -84,7 +84,7 @@ var l2CE1D476_0 = instance_place(x + 0, y + 2, [collision_tilemap]);if ((l2CE1D
 	
 		/// @DnDAction : YoYo Games.Instances.Sprite_Scale
 		/// @DnDVersion : 1
-		/// @DnDHash : 1C4E996B
+		/// @DnDHash : 2282FF03
 		/// @DnDParent : 094F6B7C
 		/// @DnDArgument : "xscale" "abs(image_xscale)"
 		/// @DnDArgument : "yscale" "image_yscale"

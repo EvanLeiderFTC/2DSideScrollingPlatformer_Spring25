@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.1.152",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"2DSideScrollingPlatformer",
   "resources":[
@@ -48,6 +48,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"menu","path":"rooms/menu/menu.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
     {"id":{"name":"story","path":"rooms/story/story.yy",},},
     {"id":{"name":"spr_btn","path":"sprites/spr_btn/spr_btn.yy",},},
     {"id":{"name":"spr_coin_hud","path":"sprites/spr_coin_hud/spr_coin_hud.yy",},},
@@ -68,6 +69,7 @@
     {"roomId":{"name":"menu","path":"rooms/menu/menu.yy",},},
     {"roomId":{"name":"story","path":"rooms/story/story.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
