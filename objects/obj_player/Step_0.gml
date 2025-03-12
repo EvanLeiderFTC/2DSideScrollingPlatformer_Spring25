@@ -1,12 +1,5 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
-/// @DnDHash : 0E6AE778
-/// @DnDArgument : "expr" "layer_tilemap_get_id("Tiles")"
-/// @DnDArgument : "var" "collision_tilemap"
-collision_tilemap = layer_tilemap_get_id("Tiles");
-
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
 /// @DnDHash : 16B43CB6
 /// @DnDComment : 1 would be pressing right$(13_10)-1 would be pressing left$(13_10)0 would be no input
 /// @DnDArgument : "expr" "keyboard_check(vk_right) - keyboard_check(vk_left)"
@@ -73,8 +66,6 @@ if ((l0879589D_0 > 0))
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 758C8F6E
 		/// @DnDParent : 0B91C2C7
-		/// @DnDArgument : "soundid" ""
-		audio_play_sound(, 0, 0, 1.0, undefined, 1.0);
 	}
 }
 
