@@ -10,6 +10,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 029E209C
+/// @DnDComment : key left OR$(13_10)dpad left OR$(13_10)left joystick left
 /// @DnDArgument : "expr" "keyboard_check(vk_left)||gamepad_button_check(0,gp_padl)||(gamepad_axis_value(0,gp_axislh) < -0.2)"
 /// @DnDArgument : "var" "controls_input_left"
 controls_input_left = keyboard_check(vk_left)||gamepad_button_check(0,gp_padl)||(gamepad_axis_value(0,gp_axislh) < -0.2);
@@ -17,6 +18,7 @@ controls_input_left = keyboard_check(vk_left)||gamepad_button_check(0,gp_padl)||
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 61D961CB
+/// @DnDComment : key right OR$(13_10)dpad right OR$(13_10)left joystick right
 /// @DnDArgument : "expr" "keyboard_check(vk_right)||gamepad_button_check(0,gp_padr)||(gamepad_axis_value(0,gp_axislh) > 0.2)"
 /// @DnDArgument : "var" "controls_input_right"
 controls_input_right = keyboard_check(vk_right)||gamepad_button_check(0,gp_padr)||(gamepad_axis_value(0,gp_axislh) > 0.2);
@@ -152,3 +154,20 @@ else
 /// @DnDArgument : "maxymove" "jump_speed"
 /// @DnDArgument : "object" "collision_tilemap"
 move_and_collide(move_x, move_y, collision_tilemap,4,0,0,walk_speed,jump_speed);
+
+/// @DnDAction : YoYo Games.Collisions.If_Object_At
+/// @DnDVersion : 1.1
+/// @DnDHash : 20367917
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "2"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "object" "collision_tilemap_death_zone"
+var l20367917_0 = instance_place(x + 0, y + 2, [collision_tilemap_death_zone]);
+if ((l20367917_0 > 0))
+{
+	/// @DnDAction : YoYo Games.Rooms.Restart_Room
+	/// @DnDVersion : 1
+	/// @DnDHash : 54D349C9
+	/// @DnDParent : 20367917
+	room_restart();
+}

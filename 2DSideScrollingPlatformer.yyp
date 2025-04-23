@@ -52,6 +52,7 @@
     {"id":{"name":"spr_btn","path":"sprites/spr_btn/spr_btn.yy",},},
     {"id":{"name":"spr_coin_hud","path":"sprites/spr_coin_hud/spr_coin_hud.yy",},},
     {"id":{"name":"spr_coin","path":"sprites/spr_coin/spr_coin.yy",},},
+    {"id":{"name":"spr_death_zone","path":"sprites/spr_death_zone/spr_death_zone.yy",},},
     {"id":{"name":"spr_enemy1_idle","path":"sprites/spr_enemy1_idle/spr_enemy1_idle.yy",},},
     {"id":{"name":"spr_enemy1_jump","path":"sprites/spr_enemy1_jump/spr_enemy1_jump.yy",},},
     {"id":{"name":"spr_enemy1_walk","path":"sprites/spr_enemy1_walk/spr_enemy1_walk.yy",},},
