@@ -49,10 +49,7 @@ move_x = move_x * walk_speed;
 /// @DnDArgument : "y" "2"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "object" "collision_tilemap"
-var l0879589D_0 = instance_place(x + 0, y + 2, [collision_tilemap]);
-if ((l0879589D_0 > 0))
-{
-	/// @DnDAction : YoYo Games.Common.Variable
+var l0879589D_0 = instance_place(x + 0, y + 2, [collision_tilemap]);if ((l0879589D_0 > 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 0B61A85F
 	/// @DnDComment : reset the falling speed$(13_10)on movement Y$(13_10)when you landed on ground
@@ -71,11 +68,7 @@ if ((l0879589D_0 > 0))
 	/// @DnDVersion : 1
 	/// @DnDHash : 0B91C2C7
 	/// @DnDParent : 0879589D
-	var l0B91C2C7_0;
-	l0B91C2C7_0 = keyboard_check_pressed(vk_space);
-	if (l0B91C2C7_0)
-	{
-		/// @DnDAction : YoYo Games.Common.Variable
+	var l0B91C2C7_0;l0B91C2C7_0 = keyboard_check_pressed(vk_space);if (l0B91C2C7_0){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 7374C4F8
 		/// @DnDComment : jump
@@ -87,18 +80,33 @@ if ((l0879589D_0 > 0))
 		/// @DnDAction : YoYo Games.Audio.Play_Audio
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 758C8F6E
-		/// @DnDParent : 0B91C2C7
-	}
+		/// @DnDParent : 0B91C2C7}
 
 	/// @DnDAction : YoYo Games.Gamepad.If_Gamepad_Button_Pressed
 	/// @DnDVersion : 1.1
 	/// @DnDHash : 3FFAF373
 	/// @DnDParent : 0879589D
 	/// @DnDArgument : "btn" "gp_face1"
-	var l3FFAF373_0 = 0;
-	var l3FFAF373_1 = gp_face1;
-	if(gamepad_is_connected(l3FFAF373_0) && gamepad_button_check_pressed(l3FFAF373_0, l3FFAF373_1))
-	{
+	var l3FFAF373_0 = 0;var l3FFAF373_1 = gp_face1;if(gamepad_is_connected(l3FFAF373_0) && gamepad_button_check_pressed(l3FFAF373_0, l3FFAF373_1)){	/// @DnDAction : YoYo Games.Common.Function_Call
+		/// @DnDVersion : 1
+		/// @DnDHash : 1E867304
+		/// @DnDComment : arg 1 is device id$(13_10)arg 2 is left motor$(13_10)arg 3 is right motor
+		/// @DnDInput : 3
+		/// @DnDParent : 3FFAF373
+		/// @DnDArgument : "function" "gamepad_set_vibration"
+		/// @DnDArgument : "arg" "0"
+		/// @DnDArgument : "arg_1" "0.7"
+		/// @DnDArgument : "arg_2" "0.7"
+		gamepad_set_vibration(0, 0.7, 0.7);
+	
+		/// @DnDAction : YoYo Games.Instances.Set_Alarm
+		/// @DnDVersion : 1
+		/// @DnDHash : 6260C29C
+		/// @DnDComment : start ticking an Alarm$(13_10)to reset the rumble to turn off$(13_10)after the countdown delay
+		/// @DnDParent : 3FFAF373
+		/// @DnDArgument : "steps" "15"
+		alarm_set(0, 15);
+	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 73E0D85B
@@ -111,16 +119,12 @@ if ((l0879589D_0 > 0))
 		/// @DnDAction : YoYo Games.Audio.Play_Audio
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 287CF5EE
-		/// @DnDParent : 3FFAF373
-	}
-}
+		/// @DnDParent : 3FFAF373}}
 
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1
 /// @DnDHash : 1C6CA721
-else
-{
-	/// @DnDAction : YoYo Games.Common.If_Variable
+else{	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 192094C4
 	/// @DnDComment : 10 is the limit of how fast$(13_10)the gravity will take you$(13_10)downwards. IF it was any higher$(13_10)the gravity would be$(13_10)able to take you downwards faster.
@@ -128,9 +132,7 @@ else
 	/// @DnDArgument : "var" "move_y"
 	/// @DnDArgument : "op" "1"
 	/// @DnDArgument : "value" "10"
-	if(move_y < 10)
-	{
-		/// @DnDAction : YoYo Games.Common.Variable
+	if(move_y < 10){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 11372D0B
 		/// @DnDComment : add gravity$(13_10)
@@ -138,9 +140,7 @@ else
 		/// @DnDArgument : "expr" "1"
 		/// @DnDArgument : "expr_relative" "1"
 		/// @DnDArgument : "var" "move_y"
-		move_y += 1;
-	}
-}
+		move_y += 1;}}
 
 /// @DnDAction : YoYo Games.Movement.move_and_collide
 /// @DnDVersion : 1
